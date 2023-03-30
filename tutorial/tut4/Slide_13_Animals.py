@@ -31,4 +31,4 @@ animals.append(dog)
 animals.append(cow)
 
 for animal in animals:
-    print(animal.getName(), "is a", type(animal).__name__ + " *" + animal.cry() + "*")
+    print(f"{animal.getName()} is {type(animal).__name__} *{animal.cry()}*")

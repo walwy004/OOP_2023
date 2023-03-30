@@ -9,6 +9,7 @@ class Insect:
     def crawl(self):
         return self.__class__.__name__ + " is Crawling"
 
+
 class Ant(Insect):
     def __init__(self, name, wingCount, legSize, hasCarapace, isQueen):
         super().__init__(name, wingCount, legSize, hasCarapace)
@@ -42,10 +43,12 @@ insects = []
 grasshopper = Grasshopper("Hopper", 4, "Large", True, 3.0)
 bee = Bee("Berry", 2, "Small", False, True)
 ant = Ant("Antonic", 2, "Small", False, True)
+insect = Insect("Insect", 0, "Small", False)
 
 insects.append(grasshopper)
 insects.append(bee)
 insects.append(ant)
+insects.append(insect)
 
 for insect in insects:
     print(insect.crawl())

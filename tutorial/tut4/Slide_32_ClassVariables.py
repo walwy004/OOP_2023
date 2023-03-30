@@ -2,7 +2,7 @@ class SimpleCounter:
     count = 0
 
     def increase(self):
-        SimpleCounter.count = SimpleCounter.count + 1
+        SimpleCounter.count += 1
 
     @classmethod
     def print_count(cls):
@@ -11,6 +11,8 @@ class SimpleCounter:
 
 c1 = SimpleCounter()
 c1.increase()
+SimpleCounter.print_count()
+
 c2 = SimpleCounter()
 c2.increase()
 SimpleCounter.print_count()

@@ -13,6 +13,9 @@ class Mage:
             spellbookInfo += spell 
             spellbookInfo += "\n "
         return spellbookInfo
+    
+    def __str__(self):
+        return f"Instance of Mage Class: \n {self.printSpellbook()}" 
 
 class DarkMagician(Mage):
     def __init__(self, health, mana, isNecromancer):
@@ -24,10 +27,11 @@ class DarkMagician(Mage):
         return f"Instance of Dark Magician Class: \n {self.printSpellbook()}" 
 
 mage = Mage(100, 250)
-print(mage)
 
 darkMagician = DarkMagician(30, 500, True)
 darkMagician.addSpell("Dark Pulse")
 darkMagician.addSpell("Raise Skeleton")
 darkMagician.addSpell("Reap Soul")
+mage.addSpell("Fire Ball")
+print(mage)
 print(darkMagician)
